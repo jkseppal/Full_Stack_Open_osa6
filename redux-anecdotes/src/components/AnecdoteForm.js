@@ -14,10 +14,11 @@ const NewAnecdote = (props) => {
     //const newAnecdote = await anecdoteService.createNew(content)
     //dispatch(createAnecdote(newAnecdote))
     dispatch(createAnecdote(content))
-    dispatch(notificationChange(`you created '${content}'`))
+    dispatch(notificationChange(`you created '${content}'`, 5))
+    /*dispatch(notificationChange(`you created '${content}'`))
     setTimeout(() => {
       dispatch(notificationChange('NULL'))
-    }, 5000)
+    }, 5000)*/
   }
 
   return (
