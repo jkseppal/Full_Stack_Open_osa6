@@ -16,21 +16,9 @@ const AnecdoteList = (props) => {
     })
   }
 
-  /*const voteAnecdote = (anecdote) => {
-    dispatch(giveVote(anecdote.id))
-    dispatch(notificationChange(`you voted '${anecdote.content}'`))
-    setTimeout(() => {
-      dispatch(notificationChange('NULL'))
-    }, 5000)
-  }*/
-
   const voteAnecdote = (anecdote) => {
     dispatch(giveVote(anecdote.id, anecdote.content, anecdote.votes))
     dispatch(notificationChange(`you voted '${anecdote.content}'`, 5))
-    /*dispatch(notificationChange(`you voted '${anecdote.content}'`))
-    setTimeout(() => {
-      dispatch(notificationChange('NULL'))
-    }, 5000)*/
   }
 
   return(

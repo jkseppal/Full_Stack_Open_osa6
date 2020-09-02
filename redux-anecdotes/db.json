@@ -17,7 +17,7 @@
     },
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      "votes": 31,
+      "votes": 33,
       "id": "36975"
     },
     {
@@ -32,43 +32,13 @@
     },
     {
       "content": "Anecdote can be added to backend",
-      "votes": 0,
+      "votes": 1,
       "id": "A8xQCcn"
     },
     {
-      "content": "Anecdote can still be added to backend",
-      "votes": 1,
-      "id": "UEgRbUl"
-    },
-    {
-      "content": "...And it's still possible!",
+      "content": "And app is still working",
       "votes": 0,
-      "id": "OAj0dx8"
-    },
-    {
-      "content": "Notifications still work",
-      "votes": 0,
-      "id": "DPrq3RM"
-    },
-    {
-      "content": "Does notification work while adding a new anecdote?",
-      "votes": 0,
-      "id": "TPxOUIp"
-    },
-    {
-      "content": "Lisätään vielä yksi",
-      "votes": 0,
-      "id": "3BtDZM8"
-    },
-    {
-      "content": "Ja kerta kiellon päälle...",
-      "votes": 1,
-      "id": "5B4TfvU"
-    },
-    {
-      "content": "Ja uusi vielä",
-      "votes": 0,
-      "id": "_lllm6m"
+      "id": "N5-JOw6"
     }
   ]
 }

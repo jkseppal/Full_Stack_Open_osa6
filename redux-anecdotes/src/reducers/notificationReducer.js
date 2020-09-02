@@ -7,13 +7,6 @@ const notificationReducer = (state = '', action) => {
   }
 }
 
-/*export const notificationChange = (notification) => {
-  return {
-    type: 'SET_NOTIFICATION',
-    notification,
-  }
-}*/
-
 export const notificationChange = (notification, timer) => {
   console.log('notification: ', notification)
   console.log('timer in ms: ', timer * 1000)

@@ -1,8 +1,7 @@
-import React from 'react'
+/*import React from 'react'
 import { useDispatch } from 'react-redux'
 import { createAnecdote } from '../reducers/anecdoteReducer'
 import { notificationChange } from '../reducers/notificationReducer'
-//import anecdoteService from '../services/anecdotes'
 
 const NewAnecdote = (props) => {
   const dispatch = useDispatch()
@@ -11,14 +10,8 @@ const NewAnecdote = (props) => {
     event.preventDefault()
     const content = event.target.anecdote.value
     event.target.anecdote.value = ''
-    //const newAnecdote = await anecdoteService.createNew(content)
-    //dispatch(createAnecdote(newAnecdote))
     dispatch(createAnecdote(content))
     dispatch(notificationChange(`you created '${content}'`, 5))
-    /*dispatch(notificationChange(`you created '${content}'`))
-    setTimeout(() => {
-      dispatch(notificationChange('NULL'))
-    }, 5000)*/
   }
 
   return (
@@ -32,4 +25,46 @@ const NewAnecdote = (props) => {
   )
 }
 
-export default NewAnecdote
+export default NewAnecdote*/
+
+import React from 'react'
+import { connect } from 'react-redux'
+import { createAnecdote } from '../reducers/anecdoteReducer'
+import { notificationChange } from '../reducers/notificationReducer'
+
+const NewAnecdote = (props) => {
+
+  const addAnecdote = async (event) => {
+    event.preventDefault()
+    const content = event.target.anecdote.value
+    event.target.anecdote.value = ''
+    props.createAnecdote(content)
+    props.notificationChange(`you created '${content}'`, 5)
+  }
+
+  return (
+    <div>
+      <h2>create new</h2>
+      <form onSubmit={addAnecdote}>
+        <input name="anecdote" />
+        <button type="submit">create</button>
+      </form>
+    </div>
+  )
+}
+
+const mapStateToProps = (state) => {
+  return {
+    anecdotes: state.anecdotes,
+    notification: state.notifications,
+  }
+}
+
+const mapDispatchToProps = {
+  createAnecdote,
+  notificationChange, 
+}
+
+const ConnectedAnecdotes = connect(mapStateToProps, mapDispatchToProps)(NewAnecdote)
+
+export default ConnectedAnecdotes
